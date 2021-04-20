@@ -1456,19 +1456,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U2" library="HEXABITZ_ICs" library_urn="urn:adsk.eagle:library:20064554" deviceset="TSD305-1C55" device="" package3d_urn="urn:adsk.eagle:package:22912731/1"/>
-<part name="C11" library="Hexabitz" deviceset="C-0603" device="" value="100nf">
-<attribute name="CAPACITANCE" value="10nF"/>
-<attribute name="MFN" value="AVX"/>
-<attribute name="MPN" value="0603YC103KAT4A"/>
-<attribute name="OCTOPART_URL" value="https://octopart.com/0603yc103kat4a-avx+interconnect+%2F+elco-2550362"/>
-<attribute name="TOLERANCE" value="10%"/>
-<attribute name="VOLTAGE_RATING" value="16.0 V"/>
-</part>
-<part name="SUPPLY14" library="supply2" deviceset="VDD" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="VDD" device=""/>
-<part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="C12" library="Hexabitz" deviceset="C-0805-POL" device="" value="4.7uF">
+<part name="C11" library="Hexabitz" deviceset="C-0805-POL" device="" value="4.7uF">
 <attribute name="CAPACITANCE" value="4.7uF"/>
 <attribute name="MFN" value="Panasonic"/>
 <attribute name="MPN" value="10TPU4R7MSI"/>
@@ -1478,6 +1468,16 @@ In this library the device names are the same as the pin names of the symbols, t
 </part>
 <part name="SUPPLY16" library="supply2" deviceset="VDD" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
+<part name="C10" library="Hexabitz" deviceset="C-0603" device="" value="100nF">
+<attribute name="CAPACITANCE" value="100nF"/>
+<attribute name="MFN" value="AVX"/>
+<attribute name="MPN" value="0603YC104K4T2A"/>
+<attribute name="OCTOPART_URL" value="https://octopart.com/0603yc104k4t2a-avx+interconnect+%2F+elco-8120651"/>
+<attribute name="TOLERANCE" value="10%"/>
+<attribute name="VOLTAGE_RATING" value="16.0 V"/>
+</part>
+<part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="SUPPLY17" library="supply2" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12802,23 +12802,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="170.18" y="97.79" size="1.778" layer="95"/>
 <attribute name="VALUE" x="170.18" y="73.66" size="1.778" layer="95"/>
 </instance>
-<instance part="C11" gate="G$1" x="130.81" y="85.09" smashed="yes">
-<attribute name="NAME" x="132.334" y="88.011" size="1.778" layer="95"/>
-<attribute name="VALUE" x="132.334" y="82.931" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY14" gate="G$1" x="130.81" y="96.52" smashed="yes">
-<attribute name="VALUE" x="133.985" y="100.965" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="SUPPLY15" gate="G$1" x="135.89" y="96.52" smashed="yes">
 <attribute name="VALUE" x="139.065" y="100.965" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="GND10" gate="1" x="130.81" y="78.74" smashed="yes">
-<attribute name="VALUE" x="128.27" y="76.2" size="1.778" layer="96"/>
 </instance>
 <instance part="GND11" gate="1" x="135.89" y="78.74" smashed="yes">
 <attribute name="VALUE" x="133.35" y="76.2" size="1.778" layer="96"/>
 </instance>
-<instance part="C12" gate="G$1" x="135.89" y="87.63" smashed="yes" rot="MR0">
+<instance part="C11" gate="G$1" x="135.89" y="87.63" smashed="yes" rot="MR0">
 <attribute name="NAME" x="141.224" y="88.265" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="145.034" y="84.709" size="1.778" layer="96" rot="MR0"/>
 </instance>
@@ -12828,42 +12818,50 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="GND12" gate="1" x="158.75" y="78.74" smashed="yes" rot="R270">
 <attribute name="VALUE" x="156.21" y="81.28" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="C10" gate="G$1" x="124.46" y="85.09" smashed="yes">
+<attribute name="NAME" x="125.984" y="88.011" size="1.778" layer="95"/>
+<attribute name="VALUE" x="125.984" y="82.931" size="1.778" layer="96"/>
+</instance>
+<instance part="GND13" gate="1" x="124.46" y="80.01" smashed="yes">
+<attribute name="VALUE" x="121.92" y="77.47" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY17" gate="G$1" x="124.46" y="92.71" smashed="yes">
+<attribute name="VALUE" x="127.635" y="97.155" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="VDD" class="0">
 <segment>
-<pinref part="C11" gate="G$1" pin="1"/>
-<pinref part="SUPPLY14" gate="G$1" pin="VDD"/>
-<wire x1="130.81" y1="93.98" x2="130.81" y2="90.17" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="SUPPLY15" gate="G$1" pin="VDD"/>
 <wire x1="135.89" y1="93.98" x2="135.89" y2="90.17" width="0.1524" layer="91"/>
-<pinref part="C12" gate="G$1" pin="+"/>
+<pinref part="C11" gate="G$1" pin="+"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VDD"/>
 <pinref part="SUPPLY16" gate="G$1" pin="VDD"/>
 <wire x1="163.83" y1="93.98" x2="165.1" y2="93.98" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="SUPPLY17" gate="G$1" pin="VDD"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="C11" gate="G$1" pin="2"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="130.81" y1="81.28" x2="130.81" y2="82.55" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="135.89" y1="81.28" x2="135.89" y2="82.55" width="0.1524" layer="91"/>
-<pinref part="C12" gate="G$1" pin="-"/>
+<pinref part="C11" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="161.29" y1="78.74" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="GND13" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="I2C2_SCL" class="0">
