@@ -1250,22 +1250,22 @@ In this library the device names are the same as the pin names of the symbols, t
 </library>
 <library name="HEXABITZ_ICs" urn="urn:adsk.eagle:library:20064554">
 <packages>
-<package name="TEMPERATURESENSOR-TO5" urn="urn:adsk.eagle:footprint:22912719/1" library_version="41">
-<wire x1="-4.0386" y1="-3.5306" x2="-3.5052" y2="-2.9972" width="0.127" layer="21"/>
-<wire x1="-2.9718" y1="-3.5306" x2="-3.5052" y2="-4.064" width="0.127" layer="21"/>
-<wire x1="-3.5052" y1="-4.064" x2="-4.0386" y2="-3.5306" width="0.127" layer="21"/>
+<package name="TEMPERATURESENSOR-TO5" urn="urn:adsk.eagle:footprint:22912719/2" library_version="43">
+<wire x1="3.5306" y1="-4.0386" x2="2.9972" y2="-3.5052" width="0.127" layer="21"/>
+<wire x1="3.5306" y1="-2.9718" x2="4.064" y2="-3.5052" width="0.127" layer="21"/>
+<wire x1="4.064" y1="-3.5052" x2="3.5306" y2="-4.0386" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="4.572" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="3.8608" width="0.0508" layer="21"/>
-<pad name="4" x="0" y="-2.54" drill="0.8128" diameter="1.6764" shape="octagon"/>
-<pad name="3" x="2.54" y="0" drill="0.8128" diameter="1.6764" shape="octagon"/>
-<pad name="2" x="0" y="2.54" drill="0.8128" diameter="1.6764" shape="octagon"/>
-<pad name="1" x="-2.54" y="0" drill="0.8128" diameter="1.6764" shape="octagon"/>
+<pad name="1" x="2.54" y="0" drill="0.8128" diameter="1.6764" shape="octagon" rot="R90"/>
+<pad name="2" x="0" y="2.54" drill="0.8128" diameter="1.6764" shape="octagon" rot="R90"/>
+<pad name="3" x="-2.54" y="0" drill="0.8128" diameter="1.6764" shape="octagon" rot="R90"/>
+<pad name="4" x="0" y="-2.54" drill="0.8128" diameter="1.6764" shape="octagon" rot="R90"/>
 <text x="-2.54" y="5.08" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.175" y="-6.985" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
-<package3d name="TEMPERATURESENSOR-TO5" urn="urn:adsk.eagle:package:22912731/1" type="box" library_version="41">
+<package3d name="TEMPERATURESENSOR-TO5" urn="urn:adsk.eagle:package:22912731/2" type="box" library_version="43">
 <packageinstances>
 <packageinstance name="TEMPERATURESENSOR-TO5"/>
 </packageinstances>
@@ -1286,7 +1286,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TSD305-1C55" urn="urn:adsk.eagle:component:22912745/1" prefix="U" library_version="41">
+<deviceset name="TSD305-1C55" urn="urn:adsk.eagle:component:22912745/2" prefix="U" library_version="43">
 <description>&lt;b&gt;I2C DIGITAL THERMOPILE SENSOR &lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TSD305-1C55" x="0" y="0"/>
@@ -1300,7 +1300,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <connect gate="G$1" pin="VDD" pad="3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:22912731/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22912731/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -1455,7 +1455,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VDD" device=""/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U2" library="HEXABITZ_ICs" library_urn="urn:adsk.eagle:library:20064554" deviceset="TSD305-1C55" device="" package3d_urn="urn:adsk.eagle:package:22912731/1"/>
+<part name="U2" library="HEXABITZ_ICs" library_urn="urn:adsk.eagle:library:20064554" deviceset="TSD305-1C55" device="" package3d_urn="urn:adsk.eagle:package:22912731/2"/>
 <part name="SUPPLY15" library="supply2" deviceset="VDD" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="C11" library="Hexabitz" deviceset="C-0805-POL" device="" value="4.7uF">
